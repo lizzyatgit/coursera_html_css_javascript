@@ -1,0 +1,132 @@
+<html>
+<head>
+    
+    <meta name="author" content="Lizzy ">
+    <style>
+        
+        img{
+              position: absolute;
+        }
+        section{
+            width: 1500;
+           
+        }
+        div#leftside{
+            width: 500px;
+            height:500px;
+            float: left;
+            position: absolute;
+           
+        }
+        
+        div#rightside{
+            width:500px;
+            margin-left:650px;
+            height:500px;
+            border-left: 1px solid black;
+            position:absolute;
+        }
+        
+    
+    </style>
+   
+    </head>
+    
+    
+    
+    <body onload="generateFaces()">
+        
+    <h1><strong>Matching Game</strong></h1> <br>
+        <p>Click on the extra smiling face on the left</p> <br>
+ <section>
+    <div id="leftside"> </div>
+    <div id="rightside"></div>
+ </section>
+        
+        <script>
+        
+            var numberOfFaces = 5;
+            var theLeftSide = document.getElementById("leftside");
+            var theRightSide = document.getElementById("rightside");
+            var theBody =
+ document.getElementsByTagName("body")[0];
+            
+      
+               
+            function generateFaces(){
+                for(i=0;i<numberOfFaces;i++)  {
+                     var NewImg = document.createElement("img");
+                var url="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png"
+                NewImg.src= url;
+                var Top =Math.random()*400;
+                var Left=Math.random()*400;
+                NewImg.style.top= Top + "px";
+                NewImg.style.left=Left+ "px";
+                theLeftSide.appendChild(NewImg);
+                  };
+                
+                 var leftsideimages = theLeftSide.cloneNode(true);
+                leftsideimages.removeChild(leftsideimages.lastChild);
+                theRightSide.appendChild(leftsideimages); 
+                theLeftSide.lastChild.onclick=nextLevel;
+                
+               };
+            
+          
+                function nextLevel(event){
+                    
+                    while (theLeftSide.firstChild){
+                        theLeftSide.removeChild(theLeftSide.firstChild);
+                    }
+                    
+                    while (theRightSide.firstChild){
+                        theRightSide.removeChild(theRightSide.firstChild);
+                    }
+                    
+
+                event.stopPropagation();
+                
+                alert("Well done! Next Level!");
+
+                numberOfFaces += 5;
+
+                generateFaces();
+
+               };
+            
+            
+             theBody.onclick = function gameOver() {
+
+                    alert("Game Over!");
+
+
+
+                    theBody.onclick = null;
+
+                    theLeftSide.lastChild.onclick = null;
+
+                     }; 
+            
+          
+                
+                
+           
+        
+        
+        </script>
+  
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

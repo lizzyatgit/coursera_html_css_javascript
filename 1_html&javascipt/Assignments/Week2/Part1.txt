@@ -1,0 +1,44 @@
+<html>
+
+<body onload="do_game()">
+
+<script>
+var target;
+var guess_input_text;
+var guesses=0;
+var finished=false;
+var colors=["Aqua", "Beige", "Blue","Coral","DimGrey","HotPink","Indigo","LightSeaGreen","Lime","Maroon","Orange","Teal","Yellow" ]; 
+
+function do_game(){
+var random_number=Math.random()¡¡*¡¡colors.length;
+
+var random_number_Intiger=Math.floor(random_number);
+target=colors[random_number_Intiger];
+
+alert("The color is "+ target+".");
+   while(!finished){
+   guess_input_text=prompt("I am thingking of a color in the list : \n\n"+ "Aqua, Beige, Blue, Coral, DimGrey, HotPink, Indigo, LightSeaGreen, Lime, Maroon, Orange, Teal, Yellow. \n\n"+ "What is the color?")
+   guesses +=1;
+   finished=check_guess();
+   }
+}
+
+function check_guess(){
+if(guess_input_text==target){
+alert("You got it! \n\n"+"The color is"+target+"!\n\n"+"It took you "+guesses+"  guessess to get the color!" );
+return true;
+}
+
+
+return false;
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

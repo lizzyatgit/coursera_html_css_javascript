@@ -1,0 +1,132 @@
+
+    
+  
+  
+  <html>
+  <head>
+ <meta name="author" content="Lizzy ">
+    <style>
+      .fff  {background : lightyellow}
+      .bbb {border: 10px solid yellow}
+      .mar {margin-bottom:10px}
+      .w1   {width:720px}
+      .w2   {width:180px}
+      .w3  {width:Auto}
+      .d {display:inline-block}
+      .r  {text-align:right}
+      .top  {vertical-align :top}
+      .t    {width:360px }
+      .h{height: 50px}
+      .tc    {text-align:center}
+      .sp {background: red}
+      .tr {background:purple}
+ 
+    </style>
+  </head>
+  
+  <body>
+<h1>Please Enter Your Details For Our Dating Website</h1>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="get">
+<fieldset class="fff bbb mar w1 ">
+  <legend>Your Face</legend> <label for="image" class="w2 d r top " >Your Image : </label>
+<input type= "file" name="image" class="w2  " required> <br>
+  <lable for="preview" > <p class="w2 d r top" >Image preview:</p></lable><img id="preview">
+  <br></fieldset>
+  <br>
+  
+  <fieldset class="fff bbb mar w1 ">
+    <legend> Your General Details</legend>
+    <label for ="name"class="w2 d r top " >Your name : </label>
+         <input type="text" name="name"  placeholder ="Your full name" required><br>
+    <label for = "gender" ><p class="w2 d r"> Gender :</p> </label>
+          <input type="radio" name="gender" class="w3 tc"  required>Male
+          <input type="radio" name="gender" class="w3 tc"  required> Female
+          <br>
+    <label for="age" class="w2 d r top "> Age : </label>
+           <input type= "number" min="1" max"99" value = "18" required><br>
+    <label for="birthday"class="w2 d r top " > Date of birth : </label>
+            <input type="date"  name="birthday" ><br>
+    <label for ="color"class="w2 d r top " > Favorite color : </label>
+             <input type="color" name="color" ><br>
+    <label for ="country" class="w2 d r top "> Which country :   </label>
+            <select>
+              <option name="country" value="China">China</option>
+              <option name="country" value="USA">USA</option>
+              <option name="country" value="Canada">Canada</option>
+              <option name ="country" value="Germany">Germany</option>
+              <option name="country" value="Japan">Japan</option>
+              <option name="country" value="others">Others</option>
+              
+    </select>
+  </fieldset><br>
+  
+  <fieldset class="fff bbb mar w1 ">
+    <legend>Your indicators</legend>
+    <label for="height"><p class="w2 d r top">Height : </p> <label>
+      <p class="sp d r top"> short</p>  <input type="range" min="0" max="100" step="5" value="50" name="height">
+      <p class="tr d r top">tall</p><br>
+      <label for ="salary"><p class="w2 d r top"> Salary : </p></label>
+      <p class="sp d r top"> poor</p><input type="range" min="0" max="100" step="5" value="50" name="salary"><p class="tr d r top">rich</p>
+      <br>
+      </fieldset><br>
+      
+      <fieldset class="fff bbb mar w1 ">
+        <legend>Your contact information</legend>
+        <label for="email"class="w2 d r top ">Email : </label>
+              <input type="email" name="email" required><br>
+        <label for="mobile"class="w2 d r top ">Mobile: </label>
+              <input type="tel" name="mobile" required><br>
+        <label for = "address"class="w2 d r top ">Address :</label>
+               <input type="textarea" name="address" class="t h" required><br>
+        <label for="method" class="w3" class=" d r top ">Method to contact you : </label>
+                <input type="checkbox" name="method" value="Email" >Email
+                <input type = "checkbox" name='method' value="whatsapp"> Whatsapp
+                <input type = "checkbox" name="method" value="in-app chat"> In-app chat<br>
+      </fieldset><br>
+      
+      <input type="submit"     value="submit!">
+      </form>
+    </body>
+    </html>
+        
+        
+  
+    
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+  
+  
+  
+
+    
+  
+  
+  
+  
+  
+
+    
+  
+  
+  
+  
+  
